@@ -1,0 +1,270 @@
+/* ------------------------------------
+   GLOBAL DARK THEME (no light mode)
+------------------------------------- */
+.lp-wrapper.dark {
+  background: #0b0b0b;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.lp-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 40px;
+  align-items: center;
+}
+
+.lp-logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff6600;
+}
+
+.lp-nav-links a {
+  color: #ddd;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.lp-nav-links a:hover {
+  color: #ff6600;
+}
+
+/* HERO */
+.lp-hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 40px;
+  align-items: center;
+}
+
+.lp-title {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.highlight {
+  color: #ff6600;
+}
+
+.lp-desc {
+  margin-top: 15px;
+  font-size: 18px;
+  max-width: 450px;
+  opacity: 0.9;
+}
+
+.lp-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons */
+.lp-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid #ff6600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.lp-btn.primary {
+  background: #ff6600;
+  color: #fff;
+}
+
+.lp-btn.primary:hover {
+  transform: translateY(-2px);
+  border: 1px solid white;
+}
+
+.lp-btn.secondary {
+  color: #ff6600;
+  background: transparent;
+}
+
+.lp-btn.secondary:hover {
+  background: #ff6600;
+  color: #000;
+}
+
+/* ANIMATED GRAPHIC */
+.lp-hero-graphic {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.circle,
+.circle2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.circle {
+  border: 2px solid #ff6600;
+  opacity: 0.5;
+}
+
+.circle2 {
+  border: 2px dashed #ff6600;
+  animation-direction: reverse;
+  opacity: 0.3;
+}
+
+.circle2 img {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 70px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 2.2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -48%); }
+  50% { transform: translate(-50%, -60%); }
+  100% { transform: translate(-50%, -48%); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 0.4; }
+}
+
+/* SECTIONS */
+.lp-section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.lp-section h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.lp-section p {
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* FEATURES */
+.lp-features {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.lp-card {
+  background: #141414;
+  border: 1px solid #272727;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.lp-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff6600;
+}
+
+/* SOCIAL LINKS */
+.lp-socials a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid #ff6600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+  color: #ff6600;
+}
+
+.lp-socials a:hover {
+  background: #ff6600;
+  color: #000;
+}
+
+/* FOOTER */
+.lp-footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.7;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+}
+
+
+/* Device Responsiveness  */
+
+@media (max-width: 768px) {
+  .lp-hero-graphic {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .lp-navbar{
+    padding: 10px;
+  }
+  .lp-nav-links{
+    display: flex;
+    gap: 8px;
+  }
+  .lp-nav-links a{
+    margin-left: 0;
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .lp-nav-links{
+    gap: 5px;
+  }
+  .lp-nav-links a{
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .lp-nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .lp-nav-links a{
+    font-size: 10px;
+  }
+  .lp-hero{
+    padding: 60px 20px;
+  }
+  .lp-title {
+    font-size: 50px;
+  }
+  .lp-btn{
+    padding: 8px 12px;
+  }
+}
